@@ -252,10 +252,6 @@ function addToCart(dezeni) {
         document.getElementById('price').innerText = `Cena: ${totalPrice} evra`;
 
         // Dodajte dezen u objekat newItem koji se dodaje u korpu
-     
-
-        const cartItems = document.getElementById('cart-items');
-        cartItems.innerText = parseInt(cartItems.innerText) + 1;
 
         const cartButton = document.getElementById('cart-button');
         const notification = document.createElement('div');
