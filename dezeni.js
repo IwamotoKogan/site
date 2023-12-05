@@ -246,12 +246,39 @@ function addToCart(dezeni) {
     const selectedPatternName = selectedPatternTitle.textContent;
     const selectedDezen = dezeni.find(dezen => dezen.name === selectedPatternName);
 
+ /*ovan*/
+                                                           // Dodatna logika za proveru odabranih opcija
+    const isYesSelected = yesButton.classList.contains('selected');
+    const isNoSelected = noButton.classList.contains('selected');
+    const isLeftHingeSelected = leftHingesButton.classList.contains('selected');
+    const isRightHingeSelected = rightHingesButton.classList.contains('selected');
+
+    if (!(isYesSelected || isNoSelected)) {
+        alert("Niste odgovorili da li želite da element ima ugradjene nogice'.");
+        return;
+    }
+
+    if (!(isLeftHingeSelected || isRightHingeSelected)) {
+        alert("Niste odabrali stranu šarki.");
+        return;
+    }
+
+    if (!selectedDezen) {
+        alert("Niste odabrali dezen elementa.");
+        return;
+    }
+ /*ovan*/
+
     if (selectedDezen) {
         // Ako postoji odabrani dezen, ažurirajte cenu sa dezenom
         const totalPrice = basePrice + selectedDezen.price;
         document.getElementById('price').innerText = `Cena: ${totalPrice} evra`;
 
         // Dodajte dezen u objekat newItem koji se dodaje u korpu
+     
+
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerText = parseInt(cartItems.innerText) + 1;
 
         const cartButton = document.getElementById('cart-button');
         const notification = document.createElement('div');
@@ -380,6 +407,10 @@ rightHingesButton.addEventListener('click', () => {
 
 
 /*PITANJAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
-/*nova verzija4*/
+
+
+/*nova verzija5*/
+
+
 
 
