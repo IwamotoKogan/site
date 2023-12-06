@@ -1,8 +1,5 @@
 /*DODATOOOOOOO*/
 
-// Na vrhu skripte na stranici pregled_kuhinja.html
-// Na vrhu skripte na stranici pregled_kuhinja.html
-// Na vrhu skripte na stranici pregled_kuhinja.html
 function calculateRecommendedFrontDimensions(height, width, depth) {
     const recommendedHeight = height - 0.4; // Smanjite visinu za 4mm
     const recommendedWidth = width - 0.4; // Smanjite širinu za 4mm
@@ -22,17 +19,37 @@ if (savedItems.length > 0) {
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
         
         itemDetails.innerHTML = `
-            <p>Kreiraliiii ste element: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>
-             <p>Front: visina ${item.message}cm</p>
+           <tr>
+                                    <td class="product-thumbnail">
+                                        <img src="images/product-3.png" alt="Image" class="img-fluid">
+                                    </td>
+                                    <td class="product-name">
+                                        <h2 class="h5 text-black">Kreiraliiii ste element: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price}
+                                        evra.</h2>
+                                    </td>
+                                    <td>Dezen koji ste izabrali: ${item.dezen}</td>
+                                    <td>
+                                        <div class="input-group mb-3 d-flex align-items-center quantity-container"
+                                            style="max-width: 120px;">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-outline-black decrease"
+                                                    type="button">&minus;</button>
+                                            </div>
+                                            <input type="text" class="form-control text-center quantity-amount"
+                                                value="1" placeholder="" aria-label="Example text with button addon"
+                                                aria-describedby="button-addon1">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-black increase"
+                                                    type="button">&plus;</button>
+                                            </div>
+                                        </div>
 
-           
-            <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
-            <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
-            
-            <p>Dezen koji ste izabrali: ${item.dezen}</p>
-            <button class="order-button" data-index="${index}">Naruči</button>
-
-            <button class="delete-button" data-index="${index}">Izbriši</button>
+                                    </td>
+                                    <td>element ima nogice? Odgovor: ${item.answer}</td>
+                                    <td>šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</td>
+                                    <td>element ima nogice? Odgovor: ${item.answer}</td>
+                                    <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                                </tr>
         `;
         kuhinjaDetailsDiv1.appendChild(itemDetails);
 
@@ -43,7 +60,34 @@ if (savedItems.length > 0) {
         /*dodato*/
     });
 } else {
-    kuhinjaDetailsDiv1.innerHTML = "<p>Nemate nijedan element u korpi.</p>";
+    kuhinjaDetailsDiv1.innerHTML = `<tr>
+                                    <td class="product-thumbnail">
+                                        <img src="images/empty.png" alt="Image" class="img-fluid">
+                                    </td>
+                                    <td class="product-name">
+                                        <h2 class="h5 text-black">Nemate nijedan element u korpi.</h2>
+                                    </td>
+                                    <td>$00.00</td>
+                                    <td>
+                                        <div class="input-group mb-3 d-flex align-items-center quantity-container"
+                                            style="max-width: 120px;">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-outline-black decrease"
+                                                    type="button">&minus;</button>
+                                            </div>
+                                            <input type="text" class="form-control text-center quantity-amount"
+                                                value="1" placeholder="" aria-label="Example text with button addon"
+                                                aria-describedby="button-addon1">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-black increase"
+                                                    type="button">&plus;</button>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td>prazno</td>
+                                    <td><a href="#" class="btn btn-black btn-sm"></a></td>
+                                </tr>`;
 }
 // Ostatak vašeg koda...
 
