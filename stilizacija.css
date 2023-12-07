@@ -1,5 +1,3 @@
-
-
 /* dezeni  */
 #pattern-popup {
     position: fixed;
@@ -104,44 +102,30 @@
 }
 
 /* Dodatni stil za odabrani dezen ispod dugmeta */
-/*promena*/
 #selected-pattern {
     text-align: center;
     margin-top: 20px;
     display: none;
     /* Početno sakrijte ovaj element */
     /* Dodajte okvir */
-   
+    border: 2px solid #333;
+    /* Dodajte unutrašnji prostor */
+    padding: 10px;
     /* Postavite maksimalnu širinu */
-    width: 70px;
-    height: 70px;
+    width: 200px;
+    height: 250px;
     /* Centrirajte horizontalno */
     margin: 0 auto;
 }
 
-#selected-pattern.zuto {
-    background-color: yellow;
-    /* Primer boje pozadine za dodatnu uočljivost */
-}
-
 #selected-pattern img {
-    width: 70px;
-    /* Postavljeno na 100% širine roditelja */
-    height: 70px;
-    /* Održava proporcije slike */
+    width: 200px;
+    height: 200px;
 }
-
-#selected-pattern-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-}
-/*promena*/
 
 /*search dezena*/
 .search-dezena {
-    display: none;
+    display: flex;
     grid-column: 1 / -1;
     justify-content: center;
     text-align: center;
