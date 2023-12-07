@@ -18,7 +18,7 @@ if (savedItems.length > 0) {
         // Izračunajte preporučene dimenzije fronta na osnovu unetih dimenzija
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
         
-        itemDetails.innerHTML = `
+        itemDetails.innerHTML += `
            <tr>
                                     <td class="product-thumbnail">
                                         <img src="images/product-3.png" alt="Image" class="img-fluid">
@@ -273,7 +273,7 @@ confirmOrderButton.addEventListener('click', function () {
     window.location.href = "https://iwamotokogan.github.io/DIPO/thanks.html";
 });
 
-/*promena3*/
+/*promena4*/
 
 
 
