@@ -108,16 +108,16 @@
 #selected-pattern {
     text-align: center;
     margin-top: 20px;
-    display: block;
-    /* Dodatno stilizovanje */
+    display: none;
+    /* Početno sakrijte ovaj element */
+    /* Dodajte okvir */
     border: 2px solid #333;
+    /* Dodajte unutrašnji prostor */
     padding: 10px;
-    width: 70%;
-    height: 70%;
-
-    /* Promenjeno na 70% širine roditelja */
-    max-width: 300px;
-    /* Dodato ograničenje za maksimalnu širinu */
+    /* Postavite maksimalnu širinu */
+    width: 50px;
+    height: 50px;
+    /* Centrirajte horizontalno */
     margin: 0 auto;
 }
 
@@ -127,9 +127,9 @@
 }
 
 #selected-pattern img {
-    width: 70%;
+    width: 100%;
     /* Postavljeno na 100% širine roditelja */
-    height: 70%;
+    height: 100%;
     /* Održava proporcije slike */
 }
 
