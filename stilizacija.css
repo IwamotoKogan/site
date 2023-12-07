@@ -104,26 +104,35 @@
 }
 
 /* Dodatni stil za odabrani dezen ispod dugmeta */
+/*promena*/
 #selected-pattern {
     text-align: center;
     margin-top: 20px;
-    display: none;
-    /* Početno sakrijte ovaj element */
-    /* Dodajte okvir */
+    display: block;
+    /* Dodatno stilizovanje */
     border: 2px solid #333;
-    /* Dodajte unutrašnji prostor */
     padding: 10px;
-    /* Postavite maksimalnu širinu */
-    width: 200px;
-    height: 250px;
-    /* Centrirajte horizontalno */
+    width: 70%; /* Promenjeno na 70% širine roditelja */
+    max-width: 300px; /* Dodato ograničenje za maksimalnu širinu */
     margin: 0 auto;
 }
 
-#selected-pattern img {
-    width: 200px;
-    height: 200px;
+#selected-pattern.zuto {
+    background-color: yellow; /* Primer boje pozadine za dodatnu uočljivost */
 }
+
+#selected-pattern img {
+    width: 100%; /* Postavljeno na 100% širine roditelja */
+    height: auto; /* Održava proporcije slike */
+}
+
+#selected-pattern-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+/*promena*/
 
 /*search dezena*/
 .search-dezena {
