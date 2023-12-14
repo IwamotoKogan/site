@@ -20,14 +20,14 @@ if (savedItems.length > 0) {
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
 
         itemDetails.innerHTML = `
-            <td class="product-thumbnail">
+            <td class="product-thumbnail ">
                 <img src="images/product-3.png" alt="Image" class="img-fluid">
             </td>
-            <td class="product-name">
+            <td class="product-name ">
                 <h2 class="h5 text-black">Kreirali ste element: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</h2>
             </td>
-            <td>Dezen koji ste izabrali: ${item.dezen}</td>
-            <td>
+            <td class=" ">Izabrani dezen:<strong>${item.dezen}</strong></td>
+            <td class=" ">
                 <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                     <div class="input-group-prepend">
                         <button class="btn btn-outline-black decrease" type="button">&minus;</button>
@@ -38,10 +38,10 @@ if (savedItems.length > 0) {
                     </div>
                 </div>
             </td>
-            <td>element ima nogice? Odgovor: ${item.answer}</td>
-            <td>šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</td>
-            <td>element ima nogice? Odgovor: ${item.answer}</td>
-            <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+            <td class="product-name ">Front: ${item.message}cm</td>
+            <td class="product-name ">šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</td>
+            <td class="product-name ">element ima nogice? Odgovor: ${item.answer}</td>
+            <td class="product-name "><a href="#" class="btn btn-black btn-sm">X</a></td>
         `;
 
         tbody.appendChild(itemDetails);
