@@ -41,6 +41,7 @@ if (savedItems.length > 0) {
             <td class="product-name ">Front: ${item.message}cm</td>
             <td class="product-name ">šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</td>
             <td class="product-name ">element ima nogice? Odgovor: ${item.answer}</td>
+            <button class="order-button" data-index="${index}">Naruči</button>
             <button class="delete-button" data-index="${index}">Izbriši</button>
         `;
 
