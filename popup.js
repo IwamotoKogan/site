@@ -41,8 +41,7 @@ if (savedItems.length > 0) {
             <td class="product-name ">Front: ${item.message}cm</td>
             <td class="product-name ">šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</td>
             <td class="product-name ">element ima nogice? Odgovor: ${item.answer}</td>
-            <button class="order-button" data-index="${index}">Naruči</button>
-            <button class="delete-button" data-index="${index}">Izbriši</button>
+            <td class="product-name "><a href="#" class="btn btn-black btn-sm">X</a></td>
         `;
 
         tbody.appendChild(itemDetails);
@@ -113,7 +112,7 @@ orderButtons.forEach(button => {
                 <input type="hidden" name="price" value="${selectedItem.price}">
                 <input type="hidden" name="recommendedHeight" value="${selectedItem.recommendedFrontDimensions.recommendedHeight}">
                 <input type="hidden" name="recommendedWidth" value="${selectedItem.recommendedFrontDimensions.recommendedWidth}">
-                <input type="hidden" name="_next" value="https://iwamotokogan.github.io/site/thankyou.html">
+                <input type="hidden" name="_next" value="https://iwamotokogan.github.io/DIPO/thanks.html">
                 <input type="text" name="ime" placeholder="Ime" required>
                 <input type="text" name="prezime" placeholder="Prezime" required>
                 <input type="email" name="email" placeholder="Email Adresa" required>
@@ -263,6 +262,3 @@ confirmOrderButton.addEventListener('click', function () {
 });
 
 /*promena4*/
-
-
-
