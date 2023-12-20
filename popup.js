@@ -41,7 +41,10 @@ if (savedItems.length > 0) {
             <td class="product-name ">Front: ${item.message}cm</td>
             <td class="product-name ">šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</td>
             <td class="product-name ">element ima nogice? Odgovor: ${item.answer}</td>
-            <td class="product-name "><a href="#" class="btn btn-black btn-sm">X</a></td>
+            <td class="product-name ">
+                <button class="order-button" data-index="${index}">Naruči</button>
+                <button class="delete-button" data-index="${index}">Izbriši</button>
+            </td>
         `;
 
         tbody.appendChild(itemDetails);
