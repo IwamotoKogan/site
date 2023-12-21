@@ -16,27 +16,27 @@ if (savedItems.length > 0) {
     kuhinjaDetailsDiv1.innerHTML = '<h2>Moja korpa</h2>';
     savedItems.forEach((item, index) => {
         const itemDetails = document.createElement('div');
-        itemDetails.className = 'item-details row';
+        itemDetails.className = 'item-details';
         
         // Izračunajte preporučene dimenzije fronta na osnovu unetih dimenzija
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
         
         itemDetails.innerHTML = `
 
-            <div class="col-md-2">
+            <div>
                 <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>
             </div>
-            <div class="col-md-2">
+            <div>
                  <p>Front: visina ${item.message}cm</p>
             </div>
-            <div class="col-md-2">
+            <div>
                 <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
                 <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
             </div>
-            <div class="col-md-2">
+            <div>
                 <p>Izabrani dezen: ${item.dezen}</p>
             </div>
-            <div class="col-md-2">
+            <div>
                 <button class="order-button" data-index="${index}">Naruči</button>
                 <button class="delete-button" data-index="${index}">Izbriši</button>
             </div>
