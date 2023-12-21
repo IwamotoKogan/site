@@ -9,25 +9,28 @@ if (savedItems.length > 0) {
         // Izračunajte preporučene dimenzije fronta na osnovu unetih dimenzija
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
 
-        itemDetails.innerHTML = `
-            <td>
-                <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>
-            </td>
-            <td>
-                <p>Front: visina ${item.message}cm</p>
-            </td>
-            <td>
-                <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
-                <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
-            </td>
-            <td>
-                <p>Izabrani dezen: ${item.dezen}</p>
-            </td>
-            <td>
-                <button class="order-button" data-index="${index}">Naruči</button>
-                <button class="delete-button" data-index="${index}">Izbriši</button>
-            </td>
-        `;
+        // Kreirajte i dodajte td elemente u tr
+        const td1 = document.createElement('td');
+        td1.innerHTML = `<p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>`;
+        itemDetails.appendChild(td1);
+
+        const td2 = document.createElement('td');
+        td2.innerHTML = `<p>Front: visina ${item.message}cm</p>`;
+        itemDetails.appendChild(td2);
+
+        const td3 = document.createElement('td');
+        td3.innerHTML = `<p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
+                        <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>`;
+        itemDetails.appendChild(td3);
+
+        const td4 = document.createElement('td');
+        td4.innerHTML = `<p>Izabrani dezen: ${item.dezen}</p>`;
+        itemDetails.appendChild(td4);
+
+        const td5 = document.createElement('td');
+        td5.innerHTML = `<button class="order-button" data-index="${index}">Naruči</button>
+                         <button class="delete-button" data-index="${index}">Izbriši</button>`;
+        itemDetails.appendChild(td5);
 
         kuhinjaDetailsDiv1.appendChild(itemDetails);
 
@@ -38,6 +41,7 @@ if (savedItems.length > 0) {
 } else {
     kuhinjaDetailsDiv1.innerHTML = "<tr><td colspan='5'><p>Nemate nijedan element u korpi.</p></td></tr>";
 }
+
 
 
 
