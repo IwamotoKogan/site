@@ -1,64 +1,44 @@
-/*DODATOOOOOOO*/
-
-// Na vrhu skripte na stranici pregled_kuhinja.html
-// Na vrhu skripte na stranici pregled_kuhinja.html
-// Na vrhu skripte na stranici pregled_kuhinja.html
-function calculateRecommendedFrontDimensions(height, width, depth) {
-    const recommendedHeight = height - 0.4; // Smanjite visinu za 4mm
-    const recommendedWidth = width - 0.4; // Smanjite širinu za 4mm
-    return { recommendedHeight, recommendedWidth };
-}
 const kuhinjaDetailsDiv1 = document.getElementById('kuhinja-details');
 const savedItems = JSON.parse(localStorage.getItem('items')) || [];
-const kuhinjaData = JSON.parse(localStorage.getItem('kuhinjaData')); // Dodajte ovu liniju
 
 if (savedItems.length > 0) {
-    kuhinjaDetailsDiv1.innerHTML = '<h2>Moja korpa</h2>';
     savedItems.forEach((item, index) => {
         const itemDetails = document.createElement('tr');
         itemDetails.className = 'item-details';
         
         // Izračunajte preporučene dimenzije fronta na osnovu unetih dimenzija
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
-        
+
         itemDetails.innerHTML = `
-
-           
-    <td>
-    <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.
-    </p>
-</td>
-<td>
-    <p>Front: visina ${item.message}cm</p>
-</td>
-<td>
-    <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
-    <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
-</td>
-<td>
-    <p>Izabrani dezen: ${item.dezen}</p>
-</td>
-<td>
-    <button class="order-button" data-index="${index}">Naruči</button>
-    <button class="delete-button" data-index="${index}">Izbriši</button>
-</td>
-
-            
+            <td>
+                <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>
+            </td>
+            <td>
+                <p>Front: visina ${item.message}cm</p>
+            </td>
+            <td>
+                <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
+                <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
+            </td>
+            <td>
+                <p>Izabrani dezen: ${item.dezen}</p>
+            </td>
+            <td>
+                <button class="order-button" data-index="${index}">Naruči</button>
+                <button class="delete-button" data-index="${index}">Izbriši</button>
+            </td>
         `;
+
         kuhinjaDetailsDiv1.appendChild(itemDetails);
 
-        /*dodato*/
         // Dodajte preporučene dimenzije u lokalno skladište za svaki element
-    savedItems[index].recommendedFrontDimensions = recommendedFrontDimensions;
-    localStorage.setItem('items', JSON.stringify(savedItems));
-        /*dodato*/
+        savedItems[index].recommendedFrontDimensions = recommendedFrontDimensions;
+        localStorage.setItem('items', JSON.stringify(savedItems));
     });
 } else {
-    kuhinjaDetailsDiv1.innerHTML = "<p>Nemate nijedan element u korpi.</p>";
+    kuhinjaDetailsDiv1.innerHTML = "<tr><td colspan='5'><p>Nemate nijedan element u korpi.</p></td></tr>";
 }
-// Ostatak vašeg koda...
 
-// Ostatak vašeg koda...
 
 
 
