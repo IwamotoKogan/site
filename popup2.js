@@ -16,23 +16,31 @@ if (savedItems.length > 0) {
     kuhinjaDetailsDiv1.innerHTML = '<h2>Moja korpa</h2>';
     savedItems.forEach((item, index) => {
         const itemDetails = document.createElement('div');
-        itemDetails.className = 'item-details';
+        itemDetails.className = 'item-details row';
         
         // Izračunajte preporučene dimenzije fronta na osnovu unetih dimenzija
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
         
         itemDetails.innerHTML = `
-            <p>Kreiraliiii ste element: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>
-             <p>Front: visina ${item.message}cm</p>
 
-           
-            <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
-            <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
+            <div class="col-md-2">
+                <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>
+            </div>
+            <div class="col-md-2">
+                 <p>Front: visina ${item.message}cm</p>
+            </div>
+            <div class="col-md-2">
+                <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
+                <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
+            </div>
+            <div class="col-md-2">
+                <p>Izabrani dezen: ${item.dezen}</p>
+            </div>
+            <div class="col-md-2">
+                <button class="order-button" data-index="${index}">Naruči</button>
+                <button class="delete-button" data-index="${index}">Izbriši</button>
+            </div>
             
-            <p>Dezen koji ste izabrali: ${item.dezen}</p>
-            <button class="order-button" data-index="${index}">Naruči</button>
-
-            <button class="delete-button" data-index="${index}">Izbriši</button>
         `;
         kuhinjaDetailsDiv1.appendChild(itemDetails);
 
