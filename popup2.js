@@ -15,7 +15,7 @@ const kuhinjaData = JSON.parse(localStorage.getItem('kuhinjaData')); // Dodajte 
 if (savedItems.length > 0) {
     kuhinjaDetailsDiv1.innerHTML = '<h2>Moja korpa</h2>';
     savedItems.forEach((item, index) => {
-        const itemDetails = document.createElement('div');
+        const itemDetails = document.createElement('tr');
         itemDetails.className = 'item-details';
         
         // Izračunajte preporučene dimenzije fronta na osnovu unetih dimenzija
@@ -23,7 +23,7 @@ if (savedItems.length > 0) {
         
         itemDetails.innerHTML = `
 
-           <tr>
+           
     <td>
     <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.
     </p>
@@ -42,7 +42,7 @@ if (savedItems.length > 0) {
     <button class="order-button" data-index="${index}">Naruči</button>
     <button class="delete-button" data-index="${index}">Izbriši</button>
 </td>
-</tr>
+
             
         `;
         kuhinjaDetailsDiv1.appendChild(itemDetails);
