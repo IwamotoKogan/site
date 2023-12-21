@@ -23,23 +23,26 @@ if (savedItems.length > 0) {
         
         itemDetails.innerHTML = `
 
-            <div>
-                <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>
-            </div>
-            <div>
-                 <p>Front: visina ${item.message}cm</p>
-            </div>
-            <div>
-                <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
-                <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
-            </div>
-            <div>
-                <p>Izabrani dezen: ${item.dezen}</p>
-            </div>
-            <div>
-                <button class="order-button" data-index="${index}">Naruči</button>
-                <button class="delete-button" data-index="${index}">Izbriši</button>
-            </div>
+           <tr>
+    <td>
+    <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.
+    </p>
+</td>
+<td>
+    <p>Front: visina ${item.message}cm</p>
+</td>
+<td>
+    <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
+    <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
+</td>
+<td>
+    <p>Izabrani dezen: ${item.dezen}</p>
+</td>
+<td>
+    <button class="order-button" data-index="${index}">Naruči</button>
+    <button class="delete-button" data-index="${index}">Izbriši</button>
+</td>
+</tr>
             
         `;
         kuhinjaDetailsDiv1.appendChild(itemDetails);
