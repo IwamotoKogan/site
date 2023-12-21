@@ -1,48 +1,59 @@
+function calculateRecommendedFrontDimensions(height, width, depth) {
+    const recommendedHeight = height - 0.4; // Smanjite visinu za 4mm
+    const recommendedWidth = width - 0.4; // Smanjite širinu za 4mm
+    return { recommendedHeight, recommendedWidth };
+}
 const kuhinjaDetailsDiv1 = document.getElementById('kuhinja-details');
 const savedItems = JSON.parse(localStorage.getItem('items')) || [];
+const kuhinjaData = JSON.parse(localStorage.getItem('kuhinjaData')); // Dodajte ovu liniju
 
 if (savedItems.length > 0) {
+    
     savedItems.forEach((item, index) => {
         const itemDetails = document.createElement('tr');
         itemDetails.className = 'item-details';
         
         // Izračunajte preporučene dimenzije fronta na osnovu unetih dimenzija
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(item.height, item.width, item.depth);
+        
+        itemDetails.innerHTML = `
 
-        // Kreirajte i dodajte td elemente u tr
-        const td1 = document.createElement('td');
-        td1.innerHTML = `<p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</p>`;
-        itemDetails.appendChild(td1);
+           
+    <td>
+    <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.
+    </p>
+</td>
+<td>
+    <p>Front: visina ${item.message}cm</p>
+</td>
+<td>
+    <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
+    <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
+</td>
+<td>
+    <p>Izabrani dezen: ${item.dezen}</p>
+</td>
+<td>
+    <button class="order-button" data-index="${index}">Naruči</button>
+    <button class="delete-button" data-index="${index}">Izbriši</button>
+</td>
 
-        const td2 = document.createElement('td');
-        td2.innerHTML = `<p>Front: visina ${item.message}cm</p>`;
-        itemDetails.appendChild(td2);
-
-        const td3 = document.createElement('td');
-        td3.innerHTML = `<p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
-                        <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>`;
-        itemDetails.appendChild(td3);
-
-        const td4 = document.createElement('td');
-        td4.innerHTML = `<p>Izabrani dezen: ${item.dezen}</p>`;
-        itemDetails.appendChild(td4);
-
-        const td5 = document.createElement('td');
-        td5.innerHTML = `<button class="order-button" data-index="${index}">Naruči</button>
-                         <button class="delete-button" data-index="${index}">Izbriši</button>`;
-        itemDetails.appendChild(td5);
-
+            
+        `;
         kuhinjaDetailsDiv1.appendChild(itemDetails);
 
+        /*dodato*/
         // Dodajte preporučene dimenzije u lokalno skladište za svaki element
-        savedItems[index].recommendedFrontDimensions = recommendedFrontDimensions;
-        localStorage.setItem('items', JSON.stringify(savedItems));
+    savedItems[index].recommendedFrontDimensions = recommendedFrontDimensions;
+    localStorage.setItem('items', JSON.stringify(savedItems));
+        /*dodato*/
     });
 } else {
-    kuhinjaDetailsDiv1.innerHTML = "<tr><td colspan='5'><p>Nemate nijedan element u korpi.</p></td></tr>";
+    kuhinjaDetailsDiv1.innerHTML = "<p>Nemate nijedan element u korpi.</p>";
 }
+// Ostatak vašeg koda...
 
-
+// Ostatak vašeg koda...
 
 
 
@@ -228,8 +239,3 @@ confirmOrderButton.addEventListener('click', function () {
     // Nakon brisanja, preusmeravamo korisnika na stranicu "https://iwamotokogan.github.io/DIPO/thanks.html"
     window.location.href = "https://iwamotokogan.github.io/DIPO/thanks.html";
 });
-
-/*promena4*/
-
-
-
