@@ -97,14 +97,15 @@ orderButtons.forEach(button => {
     });
 });
 /*DODATOOOOOOO*/
-/*ovan*/
+/*ovan2*/
 
+// Dodatak za "Naruči sve" dugme
 const orderAllButton = document.getElementById('order-all-button');
 orderAllButton.addEventListener('click', function () {
     // Prikazujemo popup
     showPopup();
 
-    // Ažuriramo vrednosti u popup prozoru na osnovu izabranog elementa
+    // Ažuriramo vrednosti u popup prozoru na osnovu svih elemenata
     const popupContent = document.getElementById('popup-content');
     popupContent.innerHTML = `
         <span id="zatvori">&times;</span>
@@ -113,17 +114,29 @@ orderAllButton.addEventListener('click', function () {
             <p>Dimenzije elementa ${index + 1}: ${item.height} x ${item.width} x ${item.depth}</p>
             <p>Cena elementa ${index + 1}: ${item.price} evra</p>
             <p>Preporučene dimenzije fronta ${index + 1}: visina ${item.recommendedFrontDimensions.recommendedHeight}cm i širina ${item.recommendedFrontDimensions.recommendedWidth}cm</p>
+            <!-- Dodajte ostale informacije koje želite prikazati -->
         `).join('')}
         <form action="https://formsubmit.co/filip.jovetic753@gmail.com" method="POST">
-            <!-- Dodajte ostala polja ... -->
+            ${savedItems.map((item, index) => `
+                <input type="hidden" name="height_${index + 1}" value="${item.height}">
+                <input type="hidden" name="width_${index + 1}" value="${item.width}">
+                <input type="hidden" name="depth_${index + 1}" value="${item.depth}">
+                <input type="hidden" name="price_${index + 1}" value="${item.price}">
+                <input type="hidden" name="recommendedHeight_${index + 1}" value="${item.recommendedFrontDimensions.recommendedHeight}">
+                <input type="hidden" name="recommendedWidth_${index + 1}" value="${item.recommendedFrontDimensions.recommendedWidth}">
+            `).join('')}
             <input type="hidden" name="item_count" value="${savedItems.length}">
             <input type="hidden" name="items_data" value="${JSON.stringify(savedItems)}">
+            <input type="text" name="ime" placeholder="Ime" required>
+            <input type="text" name="prezime" placeholder="Prezime" required>
+            <input type="email" name="email" placeholder="Email Adresa" required>
+            <input type="tel" name="telefon" placeholder="Broj Telefona" required>
             <button type="submit">Naruči</button>
         </form>
     `;
 });
 
-/*ovan*/
+/*ovan2*/
 
 
 // JavaScript kod za prikazivanje/sakrivanje popup prozora
