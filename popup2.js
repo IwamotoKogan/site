@@ -97,6 +97,33 @@ orderButtons.forEach(button => {
     });
 });
 /*DODATOOOOOOO*/
+/*ovan*/
+
+const orderAllButton = document.getElementById('order-all-button');
+orderAllButton.addEventListener('click', function () {
+    // Prikazujemo popup
+    showPopup();
+
+    // Ažuriramo vrednosti u popup prozoru na osnovu izabranog elementa
+    const popupContent = document.getElementById('popup-content');
+    popupContent.innerHTML = `
+        <span id="zatvori">&times;</span>
+        <p>Unesite vaše podatke i potvrdite narudžbinu:</p>
+        ${savedItems.map((item, index) => `
+            <p>Dimenzije elementa ${index + 1}: ${item.height} x ${item.width} x ${item.depth}</p>
+            <p>Cena elementa ${index + 1}: ${item.price} evra</p>
+            <p>Preporučene dimenzije fronta ${index + 1}: visina ${item.recommendedFrontDimensions.recommendedHeight}cm i širina ${item.recommendedFrontDimensions.recommendedWidth}cm</p>
+        `).join('')}
+        <form action="https://formsubmit.co/filip.jovetic753@gmail.com" method="POST">
+            <!-- Dodajte ostala polja ... -->
+            <input type="hidden" name="item_count" value="${savedItems.length}">
+            <input type="hidden" name="items_data" value="${JSON.stringify(savedItems)}">
+            <button type="submit">Naruči</button>
+        </form>
+    `;
+});
+
+/*ovan*/
 
 
 // JavaScript kod za prikazivanje/sakrivanje popup prozora
