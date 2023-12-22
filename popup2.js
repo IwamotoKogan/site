@@ -20,18 +20,18 @@ if (savedItems.length > 0) {
 
            
     <td>
-    <p>Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.
-    </p>
+    Ime elemenat: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.
+    
 </td>
 <td>
-    <p>Front: visina ${item.message}cm</p>
+    Front: visina ${item.message}cm
 </td>
 <td>
-    <p>Da li želite da vaš element ima nogice? Odgovor: ${item.answer}</p>
-    <p>Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</p>
+    Da li želite da vaš element ima nogice? Odgovor: ${item.answer}
+    Da li želite da šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}
 </td>
 <td>
-    <p>Izabrani dezen: ${item.dezen}</p>
+    Izabrani dezen: ${item.dezen}
 </td>
 <td>
     <button class="order-button" data-index="${index}">Naruči</button>
