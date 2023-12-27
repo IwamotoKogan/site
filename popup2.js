@@ -126,8 +126,8 @@ orderAllButton.addEventListener('click', function () {
                 <input type="hidden" name="answer_${index + 1}" value="${item.answer}">
                 
             `).join('')}
-            <input type="hidden" name="item_count" value="${savedItems.length}">
-            <input type="hidden" name="items_data" value="${JSON.stringify(savedItems)}">
+            <!--<input type="hidden" name="item_count" value="${savedItems.length}">
+            <input type="hidden" name="items_data" value="${JSON.stringify(savedItems)}">-->
             <input type="text" name="ime" placeholder="Ime" required>
             <input type="text" name="prezime" placeholder="Prezimeeeeeee" required>
             <input type="email" name="email" placeholder="Email Adresa" required>
