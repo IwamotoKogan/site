@@ -88,7 +88,7 @@ orderButtons.forEach(button => {
                 <input type="hidden" name="recommendedWidth" value="${selectedItem.recommendedFrontDimensions.recommendedWidth}">
                 <input type="hidden" name="_next" value="https://iwamotokogan.github.io/DIPO/thanks.html">
                 <input type="text" name="ime" placeholder="Ime" required>
-                <input type="text" name="prezime" placeholder="Prezime" required>
+                <input type="text" name="prezime" placeholder="Prezime#####" required>
                 <input type="email" name="email" placeholder="Email Adresa" required>
                 <input type="tel" name="telefon" placeholder="Broj Telefona" required>
                 <button type="submit">Naruči</button>
@@ -128,7 +128,7 @@ orderAllButton.addEventListener('click', function () {
             <input type="hidden" name="item_count" value="${savedItems.length}">
             <input type="hidden" name="items_data" value="${JSON.stringify(savedItems)}">
             <input type="text" name="ime" placeholder="Ime" required>
-            <input type="text" name="prezime" placeholder="Prezime" required>
+            <input type="text" name="prezime" placeholder="Prezimeeeeeee" required>
             <input type="email" name="email" placeholder="Email Adresa" required>
             <input type="tel" name="telefon" placeholder="Broj Telefona" required>
             <button type="submit">Naruči</button>
