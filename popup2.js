@@ -111,9 +111,7 @@ orderAllButton.addEventListener('click', function () {
         <span id="zatvori">&times;</span>
         <p>Unesite vaše podatke i potvrdite narudžbinu:</p>
         ${savedItems.map((item, index) => `
-            <p>Dimenzije elementa ${index + 1}: ${item.height} x ${item.width} x ${item.depth}</p>
-            <p>Cena elementa ${index + 1}: ${item.price} evra</p>
-            <p>Preporučene dimenzije fronta ${index + 1}: visina ${item.recommendedFrontDimensions.recommendedHeight}cm i širina ${item.recommendedFrontDimensions.recommendedWidth}cm</p>
+            
             <!-- Dodajte ostale informacije koje želite prikazati -->
         `).join('')}
         <form action="https://formsubmit.co/filip.jovetic753@gmail.com" method="POST">
@@ -122,8 +120,11 @@ orderAllButton.addEventListener('click', function () {
                 <input type="hidden" name="width_${index + 1}" value="${item.width}">
                 <input type="hidden" name="depth_${index + 1}" value="${item.depth}">
                 <input type="hidden" name="price_${index + 1}" value="${item.price}">
-                <input type="hidden" name="recommendedHeight_${index + 1}" value="${item.recommendedFrontDimensions.recommendedHeight}">
-                <input type="hidden" name="recommendedWidth_${index + 1}" value="${item.recommendedFrontDimensions.recommendedWidth}">
+                <input type="hidden" name="message_${index + 1}" value="${item.message}">
+                <input type="hidden" name="dezen_${index + 1}" value="${item.dezen}">
+                <input type="hidden" name="hinges_${index + 1}" value="${item.hinges}">
+                <input type="hidden" name="answer_${index + 1}" value="${item.answer}">
+                
             `).join('')}
             <input type="hidden" name="item_count" value="${savedItems.length}">
             <input type="hidden" name="items_data" value="${JSON.stringify(savedItems)}">
