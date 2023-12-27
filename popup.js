@@ -39,8 +39,8 @@ if (savedItems.length > 0) {
                 </div>
             </td>
             <td class="product-name ">Front: ${item.message}cm</td>
-            <td class="product-name ">šarke budu sa leve ili desne strane? Odgovor: ${item.hinges}</td>
-            <td class="product-name ">element ima nogice? Odgovor: ${item.answer}</td>
+            <td class="product-name ">Pozicija šarki? Odgovor: ${item.hinges}</td>
+            <td class="product-name ">Potrebne nogice? Odgovor: ${item.answer}</td>
             <td class="product-name ">
                 <button class="order-button" data-index="${index}">Naruči</button>
                 <button class="delete-button" data-index="${index}">Izbriši</button>
@@ -113,8 +113,11 @@ orderButtons.forEach(button => {
                 <input type="hidden" name="width" value="${selectedItem.width}">
                 <input type="hidden" name="depth" value="${selectedItem.depth}">
                 <input type="hidden" name="price" value="${selectedItem.price}">
-                <input type="hidden" name="recommendedHeight" value="${selectedItem.recommendedFrontDimensions.recommendedHeight}">
-                <input type="hidden" name="recommendedWidth" value="${selectedItem.recommendedFrontDimensions.recommendedWidth}">
+                 <input type="hidden" name="dezen" value="${selectedItem.dezen}">
+                <input type="hidden" name="front" value="${selectedItem.message}">
+                <input type="hidden" name="šarke" value="${selectedItem.hinges}">
+                <input type="hidden" name="nogice" value="${selectedItem.answer}">
+                
                 <input type="hidden" name="_next" value="https://iwamotokogan.github.io/DIPO/thanks.html">
                 <input type="text" name="ime" placeholder="Ime" required>
                 <input type="text" name="prezime" placeholder="Prezime" required>
