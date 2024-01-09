@@ -254,9 +254,7 @@ deleteButtons.forEach(button => {
     });
 });
 
-// Dohvatanje "X" simbola i dodavanje događaja za zatvaranje modalnog prozora
-const closeModalButton = document.querySelector('.close-modal');
-closeModalButton.addEventListener('click', hideDeleteModal);
+
 
 /**delete button************* */
 
