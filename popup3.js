@@ -40,9 +40,10 @@ if (savedItems.length > 0) {
             <td class="product-name ">Potrebne nogice? Odgovor: ${item.answer}</td>
             <td class="product-name ">
                
-<button type="button" class="btn btn-primary delete-button"  data-index="${index}" data-toggle="modal" data-target="#exampleModalCenter">
+<<button type="button" class="btn btn-danger delete-button custom-delete-button" data-index="${index}" data-toggle="modal" data-target="#exampleModalCenter">
   Launch demo modal
 </button>
+
 
             </td>   
         `;
