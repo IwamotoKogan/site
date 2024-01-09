@@ -39,8 +39,9 @@ if (savedItems.length > 0) {
             <td class="product-name ">Pozicija šarki? Odgovor: ${item.hinges}</td>
             <td class="product-name ">Potrebne nogice? Odgovor: ${item.answer}</td>
             <td class="product-name ">
-                <button class="order-button" data-index="${index}">Naruči</button>
-                <button class="delete-button" data-index="${index}">Izbriši</button>
+               <button type="button" class="order-button" data-index="${index}">Naruči</button>
+<button type="button" class="delete-button" data-index="${index}">Izbriši</button>
+
             </td>   
         `;
         kuhinjaDetailsDiv1.appendChild(itemDetails);
