@@ -218,13 +218,13 @@ deleteButtons.forEach(button => {
     button.addEventListener('click', function () {
         // Prikazujemo modalni prozor kada korisnik klikne "Izbriši"
         
-        showDeleteModal();
+      
 
         // Obrada klika na dugme "Da"
         const deleteYesButton = document.getElementById('deleteYes');
         deleteYesButton.addEventListener('click', function () {
             // Ovde treba da dodate logiku za brisanje elementa
-           hideDeleteModal();
+           
             location.reload();
             // Implementirajte brisanje elementa iz liste (savedItems)
             const itemIndex = parseInt(button.getAttribute('data-index'));
