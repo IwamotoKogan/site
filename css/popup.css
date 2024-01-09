@@ -1,7 +1,3 @@
-
-
-
-/*****dodato *****/
 /* ... (ostali stilovi) ... */
 
 /* Stilizacija popup prozora */
@@ -12,106 +8,59 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Poluprozirna tamna pozadina */
+    background-color: rgba(0, 0, 0, 0.75); /* Tamnija poluprozirna pozadina */
+    z-index: 1000; /* Osigurava da je popup iznad ostalih elemenata */
 }
 
 #popup-content {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw;
-    height: 70vh;
-    background-color: #0ac3a0;
-    /* Boja pozadine popup-a */
-    border: 4px solid black;
-    border-radius: 10px;
+    width: 40vw; /* Širina od 40% od širine viewport-a */
+    max-width: 600px; /* Maksimalna širina */
+    min-height: 300px; /* Minimalna visina */
+    background-color: #fff; /* Bela boja pozadine */
+    border-radius: 15px; /* Zaobljeni uglovi */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Senka za 3D efekat */
     padding: 20px;
     text-align: center;
+    overflow: auto; /* Omogućava skrolovanje ako je sadržaj veći od popup-a */
 }
 
 #close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
     cursor: pointer;
-    color: #fff;
-}
-/*****dodato *****/
-
-/* ... (ostali stilovi) ... */
-
-/*****dodato*****/
-/* Stilizacija popup prozora */
-#popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Poluprozirna tamna pozadina */
+    color: #333;
+    transition: color 0.3s;
 }
 
-#popup-content {
-    /**/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw;
-    height: 70vh;
-    background-color: #fff;
-    /* Boja pozadine popup-a */
-    border: 4px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
+#close-button:hover {
+    color: #d9534f; /* Promena boje na hover za X dugme */
 }
-
-#close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;  }
-
-      
-             /*kartice stilizacija*/
-/* Stilizacija za kartice sa narudžbinama */
-
-
-
 
 /* Stilizacija za dugmad "Naruči" i "Izbriši" */
 .order-button,
 .delete-button {
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #007bff; /* Plava boja za dugmad */
     color: white;
-    border: none;
-    padding: 8px 16px;
+    border: 1px solid transparent; /* Transparentna granica */
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 14px;
-    margin: 4px;
-    font-weight: 700;
-    /* Bold (700) debljina fonta */
-    transition: background-color 0.2s;
+    font-size: 16px;
+    border-radius: 5px; /* Zaobljeni uglovi za dugmad */
+    transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Stilizacija za preporučene dimenzije */
-.recommended-dimensions {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    /* Bold (700) debljina fonta */
-    color: #333;
+.order-button:hover,
+.delete-button:hover {
+    background-color: #0056b3; /* Tamnija plava na hover */
+    transform: scale(1.05); /* Lagano uvećanje na hover */
 }
 
-/* Stilizacija za dezen */
-.dezen {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: #666;
-}
-/*kartice stilizacija*/   
+/* ... (ostali stilovi) ... */
+
