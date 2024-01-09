@@ -209,17 +209,7 @@ function closePopup() {
 
 /**delete button************* */
 
-// Prikazivanje modalnog prozora
-function showDeleteModal() {
-    const modal = document.getElementById('deleteModal');
-    modal.style.display = 'flex';
-}
 
-// Sakrivanje modalnog prozora
-function hideDeleteModal() {
-    const modal = document.getElementById('deleteModal');
-    modal.style.display = 'none';
-}
 
 // Dohvatimo sva dugmad "Izbriši"
 const deleteButtons = document.querySelectorAll('.delete-button');
