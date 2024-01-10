@@ -173,15 +173,7 @@ orderAllButton.addEventListener('click', function () {
 const popup = document.getElementById('popup');
 
 
-// Funkcija za prikazivanje popup prozora
-function showPopup() {
-    popup.style.display = 'block';
-}
 
-// Funkcija za sakrivanje popup prozora
-function hidePopup() {
-    popup.style.display = 'none';
-}
 
 // Postavljanje događaja "click" na dugme "Naruči" za prikazivanje popup prozora
 
