@@ -21,27 +21,25 @@ if (savedItems.length > 0) {
                 <img src="images/product-3.png" alt="Image" class="img-fluid">
             </td>
             <td class="product-name ">
-                <h2 class="h5 text-black">Kreirali ste element: ${item.height}cm x ${item.width}cm x ${item.depth}cm, cena vašeg elementa je ${item.price} evra.</h2>
+                <h2 class="h5 text-black">Ime elementa</h2>
+            </td>
+            <td class="product-name ">
+                <h2 class="h5 text-black">Visina: ${item.height}cm x širina: ${item.width}cm x dubina: ${item.depth}cm</h2>
             </td>
             <td class=" ">Izabrani dezen:<strong>${item.dezen}</strong></td>
             <td class=" ">
-                <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-black decrease" type="button">&minus;</button>
-                    </div>
-                    <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-black increase" type="button">&plus;</button>
-                    </div>
-                </div>
+               Front: ${item.message}cm
             </td>
-            <td class="product-name ">Front: ${item.message}cm</td>
-            <td class="product-name ">Pozicija šarki? Odgovor: ${item.hinges}</td>
-            <td class="product-name ">Potrebne nogice? Odgovor: ${item.answer}</td>
+            <td class="product-name ">
+                <h2 class="h5 text-black">Pozicija šarki? Odgovor: ${item.hinges}</h2>
+                <h2 class="h5 text-black">Potrebne nogice? Odgovor: ${item.answer}</h2>
+            </td>
+            <td class="product-name ">cena vašeg elementa je ${item.price} evra</td>
+            
             <td class="product-name ">
                
-<<button type="button" class="btn btn-danger delete-button custom-delete-button" data-index="${index}" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
+<<button type="button" class="btn btn-secondary custom-delete-button" data-index="${index}" data-toggle="modal" data-target="#exampleModalCenter">
+  Izbriši
 </button>
 
 
