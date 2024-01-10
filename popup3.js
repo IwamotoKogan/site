@@ -191,7 +191,7 @@ function hidePopup() {
 
 // Postavljanje događaja "click" na dugme "Naruči" unutar popup prozora za sakrivanje popup prozora
 confirmOrderButton.addEventListener('click', function () {
-    hidePopup();
+   
     sendOrderEmail();
 });
 // Postavljanje događaja "click" na X dugme za zatvaranje popup prozora
