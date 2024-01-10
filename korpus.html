@@ -63,33 +63,42 @@
 		<!-- Start Header/Navigation -->
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
-			<div class="container">
-				<a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+        <div class="container">
+            <div class="obaveza">
+                <a class="navbar-brand" href="index.html">DIPO<span>.</span></a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+                <a class="navbar-brand" href="index.html"><img class="nes" src="./images/funderlogo.svg" alt=""></a>
+            </div>
 
-				<div class="collapse navbar-collapse" id="navbarsFurni">
-					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item ">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li><a class="nav-link" href="shop.html">Shop</a></li>
-						<li><a class="nav-link" href="about.html">About us</a></li>
-						<li><a class="nav-link" href="services.html">Services</a></li>
-						<li><a class="nav-link" href="blog.html">Blog</a></li>
-						<li><a class="nav-link" href="contact.html">Contact us</a></li>
-					</ul>
 
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a class="cart-link" id="cart-button" class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-					</ul>
-				</div>
-			</div>
-				
-		</nav>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://dipo-shop.p2p.rs/kategorije1/">Proizvodi</a>
+                    </li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/enterijer">Enterijer</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/eksterijer">Eksterijer</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/dekor">Dekor</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/sanitarne-kabine">Sanitarne Kabine</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/usluge">Usluge</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/kako-do-nas">Kako do nas</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
@@ -98,7 +107,7 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>Ccheckout</h1>
+								<h1>Kreiranje elementa</h1>
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -120,39 +129,9 @@
 		      </div>
 		      <div class="row">
 		        <div class="col-md-6 mb-5 mb-md-0 zuto">
-		          <h2 class="h3 mb-3 text-black">Billing Details</h2>
+		          <h2 class="h3 mb-3 text-black">Kalkulator-unesite vrednosti</h2>
 		          <div class="p-3 p-lg-5 border bg-white">
-		            <div class="form-group">
-		              <label for="c_country" class="text-black">Lokacija <span class="text-danger">*</span></label>
-		              <select id="c_country" class="form-control">
-		                <option value="1">Odaberite opštinu/grad</option>    
-		                <option value="2">Beograd</option>    
-		                <option value="3">Bor</option>    
-		                <option value="4">Valjevo</option>    
-		                <option value="5">Vranje</option>    
-		                <option value="6">Vršac</option>    
-		                <option value="7">Zaječar</option>    
-		                <option value="8">Zrenjanin</option>    
-		                <option value="9">Jagodina</option>    
-		                <option value="9">Kikinda</option>    
-		                <option value="9">Kragujevac</option>    
-		                <option value="9">Kraljevo</option>    
-		                <option value="9">Kruševac</option>    
-		                <option value="9">Leskovac</option>    
-		                <option value="9">Loznica</option>    
-		                <option value="9">Niš</option>    
-		                <option value="9">Novi Pazar</option>    
-		                <option value="9">Novi Sad</option>    
-		                <option value="9">Pančevo</option>    
-		                <option value="9">Niš</option>    
-		                <option value="9">Novi Pazar</option>    
-		                <option value="9">Novi Sad</option>    
-		                <option value="9">Novi Pazar</option>    
-		                <option value="9">Pančevo</option>    
-		                <option value="9">Užice</option>    
-		                <option value="9">Čačak</option>    
-		              </select>
-		            </div>
+		           
 		            <div class="form-group row">
 		              <div class="col-md-4">
 		                <label for="c_fname" class="text-black">visina <span class="text-danger">*</span></label>
@@ -353,7 +332,7 @@
 
 		          <div class="row mb-5">
 		            <div class="col-md-12">
-		              <h2 class="h3 mb-3 text-black">Coupon Code</h2>
+		              <h2 class="h3 mb-3 text-black">Slika korpusa</h2>
 		              <div class="p-3 p-lg-5 border bg-white">
 
 		                
