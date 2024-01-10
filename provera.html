@@ -190,27 +190,51 @@
 
     if (savedItems.length > 0) {
         const formHTML = `
-            <p>Unesite vaše podatke i potvrdite narudžbinu:</p>
+           <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Forma za narudžbinu -->
+      <div class="border p-4 rounded">
+        <h2 class="h3 mb-3 text-black">Detalji narudžbine</h2>
+        <div class="p-3 p-lg-5 border bg-white">
+          <!-- Ovde dodajte polja forme koja su vam potrebna -->
+          <form action="https://formsubmit.co/filip.jovetic753@gmail.com" method="POST">
+            <!-- Dinamički generisana polja za svaki element -->
             ${savedItems.map((item, index) => `
-                <!-- Dodajte ostale informacije koje želite prikazati za svaki element -->
+              <input type="hidden" name="height_${index + 1}" value="${item.height}">
+              <input type="hidden" name="width_${index + 1}" value="${item.width}">
+              <input type="hidden" name="depth_${index + 1}" value="${item.depth}">
+              <input type="hidden" name="price_${index + 1}" value="${item.price}">
+              <input type="hidden" name="message_${index + 1}" value="${item.message}">
+              <input type="hidden" name="dezen_${index + 1}" value="${item.dezen}">
+              <input type="hidden" name="hinges_${index + 1}" value="${item.hinges}">
+              <input type="hidden" name="answer_${index + 1}" value="${item.answer}">
             `).join('')}
-            <form action="https://formsubmit.co/filip.jovetic753@gmail.com" method="POST">
-                ${savedItems.map((item, index) => `
-                    <input type="hidden" name="height_${index + 1}" value="${item.height}">
-                    <input type="hidden" name="width_${index + 1}" value="${item.width}">
-                    <input type="hidden" name="depth_${index + 1}" value="${item.depth}">
-                    <input type="hidden" name="price_${index + 1}" value="${item.price}">
-                    <input type="hidden" name="message_${index + 1}" value="${item.message}">
-                    <input type="hidden" name="dezen_${index + 1}" value="${item.dezen}">
-                    <input type="hidden" name="hinges_${index + 1}" value="${item.hinges}">
-                    <input type="hidden" name="answer_${index + 1}" value="${item.answer}">
-                `).join('')}
-                <input type="text" name="ime" placeholder="Ime" required>
-                <input type="text" name="prezime" placeholder="Prezime" required>
-                <input type="email" name="email" placeholder="Email Adresa" required>
-                <input type="tel" name="telefon" placeholder="Broj Telefona" required>
-                <button type="submit">Naruči</button>
-            </form>
+            <!-- Standardna polja forme -->
+            <div class="form-group">
+              <label for="ime" class="text-black">Ime <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="ime" name="ime" required>
+            </div>
+            <div class="form-group">
+              <label for="prezime" class="text-black">Prezime <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="prezime" name="prezime" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="text-black">Email Adresa <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="telefon" class="text-black">Broj Telefona <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="telefon" name="telefon" required>
+            </div>
+            <button type="submit" class="btn btn-black">Naruči</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         `;
 
         orderButtonDiv.innerHTML = formHTML;
