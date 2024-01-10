@@ -232,26 +232,29 @@ deleteButtons.forEach(button => {
     });
 });*/
 
+
+
 let indexToDelete = -1; // Globalna promenljiva za čuvanje indeksa elementa za brisanje
 
-// Dodavanje događaja klika na svako dugme "Izbriši"
-const deleteButtons = document.querySelectorAll('.delete-button');
-deleteButtons.forEach((button, index) => {
-    button.addEventListener('click', function () {
-        indexToDelete = parseInt(button.getAttribute('data-index')); // Ažurirajte indeks za brisanje
+// Dodajte događaj klika na svako dugme "Izbriši"
+document.addEventListener('DOMContentLoaded', () => {
+    const deleteButtons = document.querySelectorAll('.delete-button');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            indexToDelete = parseInt(button.getAttribute('data-index'));
+        });
+    });
+
+    // Dodajte događaj klika za dugme "Da" samo jednom
+    const deleteYesButton = document.getElementById('deleteYes');
+    deleteYesButton.addEventListener('click', () => {
+        if (indexToDelete > -1 && indexToDelete < savedItems.length) {
+            savedItems.splice(indexToDelete, 1); // Uklonite element iz niza
+            localStorage.setItem('items', JSON.stringify(savedItems)); // Ažurirajte lokalno skladište
+            location.reload(); // Osveži stranicu
+        }
     });
 });
-
-// Dodajte događaj klika za dugme "Da" samo jednom
-const deleteYesButton = document.getElementById('deleteYes');
-deleteYesButton.addEventListener('click', function () {
-    if (indexToDelete > -1 && indexToDelete < savedItems.length) {
-        savedItems.splice(indexToDelete, 1); // Uklonite element iz niza
-        localStorage.setItem('items', JSON.stringify(savedItems)); // Ažurirajte lokalno skladište
-        location.reload(); // Osveži stranicu
-    }
-});
-
 
 
 /**delete button************* */
