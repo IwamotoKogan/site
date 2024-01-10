@@ -279,11 +279,11 @@ function addToCart(dezeni) {
 
        
 
-        const cartButton = document.getElementById('cart-button');
+       /* const cartButton = document.getElementById('cart-button');
         const notification = document.createElement('div');
         notification.className = 'notification';
         notification.innerText = '+1';
-        cartButton.appendChild(notification);
+        cartButton.appendChild(notification);*/
 
         // Izračunajte preporučene dimenzije fronta
         const recommendedFrontDimensions = calculateRecommendedFrontDimensions(height, width, depth);
