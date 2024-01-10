@@ -195,14 +195,6 @@ confirmOrderButton.addEventListener('click', function () {
     sendOrderEmail();
 });
 // Postavljanje događaja "click" na X dugme za zatvaranje popup prozora
-const closeButton = document.getElementById('close-popup');
-closeButton.addEventListener('click', closePopup);
-// Funkcija za zatvaranje popup prozora
-function closePopup() {
-    popup.style.display = 'none';
-}
-
-
 
 
 
