@@ -183,7 +183,42 @@
 		</footer>
 		<!-- End Footer Section -->	
 
-        <script src="popup4.js"></script>
+        <script>
+		const orderButtons = document.querySelectorAll('.order-button');
+orderButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const itemIndex = parseInt(button.getAttribute('data-index'));
+        const selectedItem = savedItems[itemIndex];
+        
+        // Prikazujemo popup
+        showPopup();
+
+        // Ažuriramo vrednosti u popup prozoru na osnovu izabranog elementa
+        const popupContent = document.getElementById('popup-content');
+        popupContent.innerHTML = `
+            <span id="zatvori">&times;</span>
+            <p>Unesite vaše podatke i potvrdite narudžbinu:</p>
+            <p>Dimenzije elementa: ${selectedItem.height} x ${selectedItem.width} x ${selectedItem.depth}</p>
+            <p>Cena elementa: ${selectedItem.price} evra</p>
+            <p>Preporučene dimenzije fronta: visina ${selectedItem.recommendedFrontDimensions.recommendedHeight}cm i širina ${selectedItem.recommendedFrontDimensions.recommendedWidth}cm</p>
+            <form action="https://formsubmit.co/filip.jovetic753@gmail.com" method="POST">
+                <input type="hidden" name="height" value="${selectedItem.height}">
+                <input type="hidden" name="width" value="${selectedItem.width}">
+                <input type="hidden" name="depth" value="${selectedItem.depth}">
+                <input type="hidden" name="price" value="${selectedItem.price}">
+                <input type="hidden" name="recommendedHeight" value="${selectedItem.recommendedFrontDimensions.recommendedHeight}">
+                <input type="hidden" name="recommendedWidth" value="${selectedItem.recommendedFrontDimensions.recommendedWidth}">
+                <input type="hidden" name="_next" value="https://iwamotokogan.github.io/DIPO/thanks.html">
+                <input type="text" name="ime" placeholder="Ime" required>
+                <input type="text" name="prezime" placeholder="Prezime#####" required>
+                <input type="email" name="email" placeholder="Email Adresa" required>
+                <input type="tel" name="telefon" placeholder="Broj Telefona" required>
+                <button type="submit">Naruči</button>
+            </form>
+        `;
+    });
+});
+	</script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
