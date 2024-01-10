@@ -98,7 +98,7 @@ orderButtons.forEach(button => {
         showPopup();
 
         // Ažuriramo vrednosti u popup prozoru na osnovu izabranog elementa
-        const popupContent = document.getElementById('popup-content');
+       /* const popupContent = document.getElementById('popup-content');
         popupContent.innerHTML = `
             <span id="zatvori">&times;</span>
             <p>Unesite vaše podatke i potvrdite narudžbinu:</p>
@@ -121,12 +121,12 @@ orderButtons.forEach(button => {
             </form>
         `;
     });
-});
+});*/
 /*DODATOOOOOOO*/
 /*ovan2*/
 
 // Dodatak za "Naruči sve" dugme
-const orderAllButton = document.getElementById('order-all-button');
+/*const orderAllButton = document.getElementById('order-all-button');
 orderAllButton.addEventListener('click', function () {
     // Prikazujemo popup
     showPopup();
@@ -161,7 +161,7 @@ orderAllButton.addEventListener('click', function () {
             <button type="submit">Naruči</button>
         </form>
     `;
-});
+});*/
 
 /*ovan2*/
 
@@ -172,14 +172,14 @@ const popup = document.getElementById('popup');
 
 
 // Funkcija za prikazivanje popup prozora
-function showPopup() {
+/*function showPopup() {
     popup.style.display = 'block';
-}
+}*/
 
 // Funkcija za sakrivanje popup prozora
-function hidePopup() {
+/*function hidePopup() {
     popup.style.display = 'none';
-}
+}*/
 
 // Postavljanje događaja "click" na dugme "Naruči" za prikazivanje popup prozora
 
