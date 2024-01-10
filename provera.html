@@ -184,40 +184,41 @@
 		<!-- End Footer Section -->	
 
         <script>
-		const orderButtons = document.querySelectorAll('.order-button');
-orderButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const itemIndex = parseInt(button.getAttribute('data-index'));
-        const selectedItem = savedItems[itemIndex];
-        
-        // Prikazujemo popup
-        showPopup();
+		document.addEventListener('DOMContentLoaded', function() {
+    const savedItems = JSON.parse(localStorage.getItem('items')) || [];
+    const orderButtonDiv = document.querySelector('.order-button');
 
-        // Ažuriramo vrednosti u popup prozoru na osnovu izabranog elementa
-        const popupContent = document.getElementById('popup-content');
-        popupContent.innerHTML = `
-            <span id="zatvori">&times;</span>
+    if (savedItems.length > 0) {
+        const formHTML = `
             <p>Unesite vaše podatke i potvrdite narudžbinu:</p>
-            <p>Dimenzije elementa: ${selectedItem.height} x ${selectedItem.width} x ${selectedItem.depth}</p>
-            <p>Cena elementa: ${selectedItem.price} evra</p>
-            <p>Preporučene dimenzije fronta: visina ${selectedItem.recommendedFrontDimensions.recommendedHeight}cm i širina ${selectedItem.recommendedFrontDimensions.recommendedWidth}cm</p>
+            ${savedItems.map((item, index) => `
+                <!-- Dodajte ostale informacije koje želite prikazati za svaki element -->
+            `).join('')}
             <form action="https://formsubmit.co/filip.jovetic753@gmail.com" method="POST">
-                <input type="hidden" name="height" value="${selectedItem.height}">
-                <input type="hidden" name="width" value="${selectedItem.width}">
-                <input type="hidden" name="depth" value="${selectedItem.depth}">
-                <input type="hidden" name="price" value="${selectedItem.price}">
-                <input type="hidden" name="recommendedHeight" value="${selectedItem.recommendedFrontDimensions.recommendedHeight}">
-                <input type="hidden" name="recommendedWidth" value="${selectedItem.recommendedFrontDimensions.recommendedWidth}">
-                <input type="hidden" name="_next" value="https://iwamotokogan.github.io/DIPO/thanks.html">
+                ${savedItems.map((item, index) => `
+                    <input type="hidden" name="height_${index + 1}" value="${item.height}">
+                    <input type="hidden" name="width_${index + 1}" value="${item.width}">
+                    <input type="hidden" name="depth_${index + 1}" value="${item.depth}">
+                    <input type="hidden" name="price_${index + 1}" value="${item.price}">
+                    <input type="hidden" name="message_${index + 1}" value="${item.message}">
+                    <input type="hidden" name="dezen_${index + 1}" value="${item.dezen}">
+                    <input type="hidden" name="hinges_${index + 1}" value="${item.hinges}">
+                    <input type="hidden" name="answer_${index + 1}" value="${item.answer}">
+                `).join('')}
                 <input type="text" name="ime" placeholder="Ime" required>
-                <input type="text" name="prezime" placeholder="Prezime#####" required>
+                <input type="text" name="prezime" placeholder="Prezime" required>
                 <input type="email" name="email" placeholder="Email Adresa" required>
                 <input type="tel" name="telefon" placeholder="Broj Telefona" required>
                 <button type="submit">Naruči</button>
             </form>
         `;
-    });
+
+        orderButtonDiv.innerHTML = formHTML;
+    } else {
+        orderButtonDiv.innerHTML = '<p>Nema elemenata za narudžbinu.</p>';
+    }
 });
+
 	</script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
