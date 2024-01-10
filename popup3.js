@@ -173,7 +173,7 @@ orderAllButton.addEventListener('click', function () {
 // JavaScript kod za prikazivanje/sakrivanje popup prozora
 //const orderButton = document.getElementById('order-button');
 const popup = document.getElementById('popup');
-const confirmOrderButton = document.getElementById('confirm-order-button');
+
 
 // Funkcija za prikazivanje popup prozora
 function showPopup() {
@@ -190,10 +190,7 @@ function hidePopup() {
 //orderButton.addEventListener('click', showPopup);
 
 // Postavljanje događaja "click" na dugme "Naruči" unutar popup prozora za sakrivanje popup prozora
-confirmOrderButton.addEventListener('click', function () {
-   
-    sendOrderEmail();
-});
+
 // Postavljanje događaja "click" na X dugme za zatvaranje popup prozora
 
 
@@ -276,17 +273,4 @@ function deleteItem(index) {
     location.reload(); // Osveži stranicu kako bi se prikaz korpe ažurirao
 }
 
-// ...
 
-// Unutar funkcije za potvrdu narudžbine (kada se klikne na dugme "Naruči"), dodajte sledeći kod:
-confirmOrderButton.addEventListener('click', function () {
-    // ...
-    // Vaša postojeća logika za slanje podataka putem forme
-    // ...
-
-    // Nakon uspešnog slanja, brišemo element iz korpe
-    deleteItem(itemIndex);
-
-    // Nakon brisanja, preusmeravamo korisnika na stranicu "https://iwamotokogan.github.io/DIPO/thanks.html"
-    window.location.href = "https://iwamotokogan.github.io/DIPO/thanks.html";
-});
