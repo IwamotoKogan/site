@@ -34,7 +34,7 @@ if (savedItems.length > 0) {
                 <h2 class="h5 text-black">Pozicija šarki? ${item.hinges}</h2>
                 <h2 class="h5 text-black">Potrebne nogice? ${item.answer}</h2>
             </td>
-            <td class="product-name ">cena vašeg elementa je ${item.price} evra</td>
+            <td class="product-name ">cena vašeg elementa je<strong> ${item.price}</strong>  evra</td>
             
             <td class="product-name ">
                
