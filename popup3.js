@@ -37,7 +37,7 @@ if (savedItems.length > 0) {
             <td class="product-name ">cena vašeg elementa je<strong> ${item.price}</strong>  evra</td>
                
 <<button type="button" class="btn btn-danger delete-button custom-delete-button" data-index="${index}" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
+ Izbriši
 </button>
 
 
