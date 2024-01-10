@@ -234,10 +234,11 @@ deleteButtons.forEach(button => {
 
 
 
-let indexToDelete = -1; // Globalna promenljiva za čuvanje indeksa elementa za brisanje
+// Globalna promenljiva za čuvanje indeksa elementa za brisanje
+let indexToDelete = -1;
 
-// Dodajte događaj klika na svako dugme "Izbriši"
 document.addEventListener('DOMContentLoaded', () => {
+    // Dodavanje događaja klika na svako dugme "Izbriši"
     const deleteButtons = document.querySelectorAll('.delete-button');
     deleteButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -245,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Dodajte događaj klika za dugme "Da" samo jednom
+    // Dodavanje događaja klika za dugme "Da" samo jednom
     const deleteYesButton = document.getElementById('deleteYes');
     deleteYesButton.addEventListener('click', () => {
         if (indexToDelete > -1 && indexToDelete < savedItems.length) {
@@ -255,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 /**delete button************* */
