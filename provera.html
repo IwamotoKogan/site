@@ -30,33 +30,42 @@
 		<!-- Start Header/Navigation -->
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
-			<div class="container">
-				<a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+        <div class="container">
+            <div class="obaveza">
+                <a class="navbar-brand" href="index.html">DIPO<span>.</span></a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+                <a class="navbar-brand" href="index.html"><img class="nes" src="./images/funderlogo.svg" alt=""></a>
+            </div>
 
-				<div class="collapse navbar-collapse" id="navbarsFurni">
-					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item ">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li><a class="nav-link" href="shop.html">Shop</a></li>
-						<li><a class="nav-link" href="about.html">About us</a></li>
-						<li><a class="nav-link" href="services.html">Services</a></li>
-						<li><a class="nav-link" href="blog.html">Blog</a></li>
-						<li><a class="nav-link" href="contact.html">Contact us</a></li>
-					</ul>
 
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-					</ul>
-				</div>
-			</div>
-				
-		</nav>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://dipo-shop.p2p.rs/kategorije1/">Proizvodi</a>
+                    </li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/enterijer">Enterijer</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/eksterijer">Eksterijer</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/dekor">Dekor</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/sanitarne-kabine">Sanitarne Kabine</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/usluge">Usluge</a></li>
+                    <li><a class="nav-link" href="https://www.dipo.rs/kako-do-nas">Kako do nas</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
+                    <li><a class="nav-link" href="pregledk.html"><img src="images/cart.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
@@ -211,22 +220,40 @@
               <input type="hidden" name="answer_${index + 1}" value="${item.answer}">
             `).join('')}
             <!-- Standardna polja forme -->
-            <div class="form-group">
-              <label for="ime" class="text-black">Ime <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="ime" name="ime" required>
-            </div>
-            <div class="form-group">
-              <label for="prezime" class="text-black">Prezime <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="prezime" name="prezime" required>
-            </div>
-            <div class="form-group">
-              <label for="email" class="text-black">Email Adresa <span class="text-danger">*</span></label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="telefon" class="text-black">Broj Telefona <span class="text-danger">*</span></label>
-              <input type="tel" class="form-control" id="telefon" name="telefon" required>
-            </div>
+           <div class="form-group row">
+		              <div class="col-md-6">
+		                <label for="c_fname" class="text-black">Ime <span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_fname" name="c_fname">
+		              </div>
+		              <div class="col-md-6">
+		                <label for="c_lname" class="text-black">Prezime <span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_lname" name="c_lname">
+		              </div>
+		            </div>
+	      <div class="form-group row">
+		              <div class="col-md-12">
+		                <label for="c_companyname" class="text-black">Ime firme </label>
+		                <input type="text" class="form-control" id="c_companyname" name="c_companyname">
+		              </div>
+		            </div>
+	      <div class="form-group row">
+		              <div class="col-md-12">
+		                <label for="c_address" class="text-black">Addresa <span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address">
+		              </div>
+		            </div>
+	      
+            <div class="form-group row mb-5">
+		              <div class="col-md-6">
+		                <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_email_address" name="c_email_address">
+		              </div>
+		              <div class="col-md-6">
+		                <label for="c_phone" class="text-black">Broj telefona <span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
+		              </div>
+		            </div>
+	    
             <button type="submit" class="btn btn-black">Naruči</button>
           </form>
         </div>
