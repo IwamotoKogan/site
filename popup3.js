@@ -88,7 +88,7 @@ if (savedItems.length > 0) {
 
 
 
-const orderButtons = document.querySelectorAll('.order-button');
+/*const orderButtons = document.querySelectorAll('.order-button');
 orderButtons.forEach(button => {
     button.addEventListener('click', function () {
         const itemIndex = parseInt(button.getAttribute('data-index'));
@@ -98,7 +98,7 @@ orderButtons.forEach(button => {
         showPopup();
 
         // Ažuriramo vrednosti u popup prozoru na osnovu izabranog elementa
-       /* const popupContent = document.getElementById('popup-content');
+        const popupContent = document.getElementById('popup-content');
         popupContent.innerHTML = `
             <span id="zatvori">&times;</span>
             <p>Unesite vaše podatke i potvrdite narudžbinu:</p>
