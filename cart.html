@@ -4,21 +4,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="css/tiny-slider.css" rel="stylesheet">
+   
     <link href="css/style.css" rel="stylesheet">
-
-    <title>Moja korpa</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
+   
+    <title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
 
     <style>
-      
+        .custom-navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.fixed-element {
+    position: relative; /* Postavite relativnu poziciju kako biste mogli koristiti top stil */
+    top: 0; /* Početna vrijednost za top */
+    transition: top 0.3s; /* Dodajte tranziciju za glatki prijelaz */
+}
+
+    /*pozadina tabele*/
+#kuhinja-details tr:nth-child(odd) {
+    background-color: rgb(236, 242, 248); /* Boja pozadine za neparne redove */
+  }
+
+  #kuhinja-details tr:nth-child(even) {
+    background-color: #ffffff; /* Boja pozadine za parne redove */
+  }
+
+    /*pozadina tabele*/
+
     </style>
-    <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -74,11 +99,11 @@
     <!-- End Hero Section -->
 
 
-
+<!--proizvodi u korpi-->
     <div class="untree_co-section before-footer-section">
         <div class="container">
             <div class="row mb-5">
-                <form class="col-md-12">
+                <form class="col-md-12" method="post">
                     <div class="site-blocks-table">
                         <table class="table">
                             <thead class="fixed-element">
@@ -161,14 +186,7 @@
             </div>
         </div>
     </div>
-    <button id="order-all-button">Naruči sve</button>
-    <h1>KRAV"@</h1>
-    <!-- totalna cena-->
-    <div id="total-cost">UKUPNA CENA</div>
-    <!--totalna cena-->
-    <!--<div class="order1">
-    <button id="order-button">Naruči</button>
-</div>-->
+<!--proizvodi u korpi-->
 
     <!-- Start Footer Section -->
     <footer class="footer-section">
@@ -280,44 +298,13 @@
 
         </div>
     </footer>
-    
     <!-- End Footer Section -->
 
-<!--popup za BRISANJE elementa-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Potvrda brisanja</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Da li ste sigurni da želite da izbrišete ovaj element?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Ne</button>
-          <button type="button" class="btn btn-primary" id="deleteYes">Da</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-      <!--popup za BRISANJE elementa-->
+
     
     
     
-      <script src="popup3.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/tiny-slider.js"></script>
-      <script src="js/custom.js"></script>
-  
-      <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
     
     
 
