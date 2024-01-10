@@ -200,7 +200,7 @@ function hidePopup() {
 
 
 // Dohvatimo sva dugmad "Izbriši"
-/*const deleteButtons = document.querySelectorAll('.delete-button');
+const deleteButtons = document.querySelectorAll('.delete-button');
 deleteButtons.forEach(button => {
     button.addEventListener('click', function () {
         // Prikazujemo modalni prozor kada korisnik klikne "Izbriši"
@@ -230,29 +230,8 @@ deleteButtons.forEach(button => {
             hideDeleteModal();
         });
     });
-});*/
-let indexToDelete = -1; // Globalna promenljiva za čuvanje indeksa elementa za brisanje
-
-// Dodavanje događaja klika na svako dugme "Izbriši"
-const deleteButtons = document.querySelectorAll('.delete-button');
-deleteButtons.forEach((button, index) => {
-    button.addEventListener('click', function () {
-        indexToDelete = index; // Zapamtite indeks elementa koji treba izbrisati
-        // Prikazujemo modalni prozor
-        // (Ovde se može dodati kod za prikazivanje modalnog prozora, ako je potrebno)
-    });
 });
 
-// Dodajte događaj klika za dugme "Da" samo jednom
-const deleteYesButton = document.getElementById('deleteYes');
-deleteYesButton.addEventListener('click', function () {
-    if (!isNaN(indexToDelete) && indexToDelete >= 0 && indexToDelete < savedItems.length) {
-        savedItems.splice(indexToDelete, 1); // Uklonite element iz niza
-        localStorage.setItem('items', JSON.stringify(savedItems)); // Ažurirajte lokalno skladište
-        location.reload(); // Osveži stranicu
-        // (Možete dodati dodatni kod ovde ako je potrebno, nakon brisanja elementa)
-    }
-});
 
 
 
