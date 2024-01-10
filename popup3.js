@@ -38,7 +38,7 @@ if (savedItems.length > 0) {
             
             <td class="product-name ">
                
-<<button type="button" class="btn btn-secondary custom-delete-button" data-index="${index}" data-toggle="modal" data-target="#exampleModalCenter">
+<button type="button" class="btn btn-secondary custom-delete-button" data-index="${index}" data-toggle="modal" data-target="#exampleModalCenter">
   Izbriši
 </button>
 
