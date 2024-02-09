@@ -1,10 +1,4 @@
-<!-- /*
-* Bootstrap 5
-* Template Name: Furni
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,26 +17,14 @@
 		<link href="css/style.css" rel="stylesheet">
 		<!--korpus-->
 		<link rel="stylesheet" href="./css/korpus.css">
+		<link rel="stylesheet" href="./css/jezik.css">
+		<link rel="stylesheet" href="./css/kompanija.css">
 		<!--korpus-->
-		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+		<title>DIPO rs</title>
 		<style>
-			.nes {
-				width: 100px;
-			}
-			.crveno {
-				background-color: red;
-			}
-			.zuto {
-				background-color: yellow;
-			}
-			
-			
-			.slika {
-				max-width: 200px;
-			}
-			.nesto {
-				background-color: blueviolet;
-			}
+		
+		
+
 		</style>
 	</head>
 
@@ -68,19 +50,48 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item active">
-							<a class="nav-link" href="https://dipo-shop.p2p.rs/kategorije1/">Proizvodi</a>
+							<a data-lang-key="products" class="nav-link" href="https://dipo-shop.p2p.rs/kategorije1/">Proizvodi</a>
 						</li>
-						<li><a class="nav-link" href="https://www.dipo.rs/enterijer">Enterijer</a></li>
-						<li><a class="nav-link" href="https://www.dipo.rs/eksterijer">Eksterijer</a></li>
-						<li><a class="nav-link" href="https://www.dipo.rs/dekor">Dekor</a></li>
-						<li><a class="nav-link" href="https://www.dipo.rs/sanitarne-kabine">Sanitarne Kabine</a></li>
-						<li><a class="nav-link" href="https://www.dipo.rs/usluge">Usluge</a></li>
-						<li><a class="nav-link" href="https://www.dipo.rs/kako-do-nas">Kako do nas</a></li>
+						<li><a data-lang-key="interior" class="nav-link" href="https://www.dipo.rs/enterijer">Enterijer</a></li>
+						<li><a data-lang-key="exterior" class="nav-link" href="https://www.dipo.rs/eksterijer">Eksterijer</a></li>
+						<li><a data-lang-key="decor" class="nav-link" href="https://www.dipo.rs/dekor">Dekor</a></li>
+						<li><a data-lang-key="sanitaryCabins" class="nav-link" href="https://www.dipo.rs/sanitarne-kabine">Sanitarne Kabine</a></li>
+						<li><a data-lang-key="services" class="nav-link" href="https://www.dipo.rs/usluge">Usluge</a></li>
+						<li><a data-lang-key="howToFindUs" class="nav-link" href="https://www.dipo.rs/kako-do-nas">Kako do nas</a></li>
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
 						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+					</ul>
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						<nav class="nav1">
+							<input id="menu" type="checkbox">
+							<label for="menu">
+								<i class="fas fa-globe-americas text-white  fa-2x "></i>
+							</label>
+							<ul class="menu">
+						
+								<li>
+									<a href="#0" data-language="sr">
+										<span class="zuto">sr</span>
+										<img src="./images/srb.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#0" data-language="en">
+										<span>en</span>
+										<img src="./images/uk.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#0" data-language="de">
+										<span>de</span>
+										<img src="./images/ger.png" alt="Contact">
+									</a>
+								</li>
+							</ul>
+						</nav>
 					</ul>
 				</div>
 			</div>
@@ -89,241 +100,55 @@
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
-			<div class="hero ">
-				<div class="container ">
-					<div class="row justify-content-between ">
-					<!--	<div class="col-lg-5 crveno">
-							<div class="intro-excerpt ">
-					*#21#		<!	<h1>the art of <span clsas="d-block">perfection</span></h1>
-					##002#			<!--korpus
-								<p class="product-colors">Dezen korpusa:
-									<span class="black active" data-pic="korpus2.avif"></span>
-									<span class="red" data-pic="korpus3.jpg"></span>
-									<span class="orange" data-pic="korpus1.jpg"></span>
-								</p>
-								<!--korpus
-								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
-							</div>
-						</div> -->
-						<div class="col-md-6 mb-5 mb-md-0 ">
-							<h2 class="h3 mb-3 text-black">Billing Details</h2>
-							<div class="p-3 p-lg-5 border bg-white">
-								<div class="form-group">
-									<label for="c_country" class="text-black">Lokacija <span class="text-danger">*</span></label>
-									<select id="c_country" class="form-control">
-										<option value="1">Odaberite opštinu/grad</option>
-										<option value="2">Beograd</option>
-										<option value="3">Bor</option>
-										<option value="4">Valjevo</option>
-										<option value="5">Vranje</option>
-										<option value="6">Vršac</option>
-										<option value="7">Zaječar</option>
-										<option value="8">Zrenjanin</option>
-										<option value="9">Jagodina</option>
-										<option value="9">Kikinda</option>
-										<option value="9">Kragujevac</option>
-										<option value="9">Kraljevo</option>
-										<option value="9">Kruševac</option>
-										<option value="9">Leskovac</option>
-										<option value="9">Loznica</option>
-										<option value="9">Niš</option>
-										<option value="9">Novi Pazar</option>
-										<option value="9">Novi Sad</option>
-										<option value="9">Pančevo</option>
-										<option value="9">Niš</option>
-										<option value="9">Novi Pazar</option>
-										<option value="9">Novi Sad</option>
-										<option value="9">Novi Pazar</option>
-										<option value="9">Pančevo</option>
-										<option value="9">Užice</option>
-										<option value="9">Čačak</option>
-									</select>
-								</div>
-								<div class="form-group row">
-									<div class="col-md-6">
-										<label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" id="c_fname" name="c_fname">
-									</div>
-									<div class="col-md-6">
-										<label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" id="c_lname" name="c_lname">
-									</div>
-								</div>
-						
-								<div class="form-group row">
-									<div class="col-md-12">
-										<label for="c_companyname" class="text-black">Company Name </label>
-										<input type="text" class="form-control" id="c_companyname" name="c_companyname">
-									</div>
-								</div>
-						
-								<div class="form-group row">
-									<div class="col-md-12">
-										<label for="c_address" class="text-black">Address <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address">
-									</div>
-								</div>
-						
-								<div class="form-group mt-3">
-									<input type="text" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
-								</div>
-						
-								<div class="form-group row">
-									<div class="col-md-6">
-										<label for="c_state_country" class="text-black">State / Country <span
-												class="text-danger">*</span></label>
-										<input type="text" class="form-control" id="c_state_country" name="c_state_country">
-									</div>
-									<div class="col-md-6">
-										<label for="c_postal_zip" class="text-black">Posta / Zip <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip">
-									</div>
-								</div>
-						
-								<div class="form-group row mb-5">
-									<div class="col-md-6">
-										<label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" id="c_email_address" name="c_email_address">
-									</div>
-									<div class="col-md-6">
-										<label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
-									</div>
-								</div>
-						
-								<div class="form-group">
-									<label for="c_create_account" class="text-black" data-bs-toggle="collapse" href="#create_an_account"
-										role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1"
-											id="c_create_account"> Create an account?</label>
-									<div class="collapse" id="create_an_account">
-										<div class="py-2 mb-4">
-											<p class="mb-3">Create an account by entering the information below. If you are a returning customer
-												please login at the top of the page.</p>
-											<div class="form-group">
-												<label for="c_account_password" class="text-black">Account Password</label>
-												<input type="email" class="form-control" id="c_account_password" name="c_account_password"
-													placeholder="">
-											</div>
-										</div>
-									</div>
-								</div>
-						
-						
-								<div class="form-group">
-									<label for="c_ship_different_address" class="text-black" data-bs-toggle="collapse"
-										href="#ship_different_address" role="button" aria-expanded="false"
-										aria-controls="ship_different_address"><input type="checkbox" value="1" id="c_ship_different_address">
-										Ship To A Different Address?</label>
-									<div class="collapse" id="ship_different_address">
-										<div class="py-2">
-						
-											<div class="form-group">
-												<label for="c_diff_country" class="text-black">Country <span
-														class="text-danger">*</span></label>
-												<select id="c_diff_country" class="form-control">
-													<option value="1">Select a country</option>
-													<option value="2">bangladesh</option>
-													<option value="3">Algeria</option>
-													<option value="4">Afghanistan</option>
-													<option value="5">Ghana</option>
-													<option value="6">Albania</option>
-													<option value="7">Bahrain</option>
-													<option value="8">Colombia</option>
-													<option value="9">Dominican Republic</option>
-												</select>
-											</div>
-						
-						
-											<div class="form-group row">
-												<div class="col-md-6">
-													<label for="c_diff_fname" class="text-black">First Name <span
-															class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="c_diff_fname" name="c_diff_fname">
-												</div>
-												<div class="col-md-6">
-													<label for="c_diff_lname" class="text-black">Last Name <span
-															class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="c_diff_lname" name="c_diff_lname">
-												</div>
-											</div>
-						
-											<div class="form-group row">
-												<div class="col-md-12">
-													<label for="c_diff_companyname" class="text-black">Company Name </label>
-													<input type="text" class="form-control" id="c_diff_companyname" name="c_diff_companyname">
-												</div>
-											</div>
-						
-											<div class="form-group row  mb-3">
-												<div class="col-md-12">
-													<label for="c_diff_address" class="text-black">Address <span
-															class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="c_diff_address" name="c_diff_address"
-														placeholder="Street address">
-												</div>
-											</div>
-						
-											<div class="form-group">
-												<input type="text" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
-											</div>
-						
-											<div class="form-group row">
-												<div class="col-md-6">
-													<label for="c_diff_state_country" class="text-black">State / Country <span
-															class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="c_diff_state_country"
-														name="c_diff_state_country">
-												</div>
-												<div class="col-md-6">
-													<label for="c_diff_postal_zip" class="text-black">Posta / Zip <span
-															class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="c_diff_postal_zip" name="c_diff_postal_zip">
-												</div>
-											</div>
-						
-											<div class="form-group row mb-5">
-												<div class="col-md-6">
-													<label for="c_diff_email_address" class="text-black">Email Address <span
-															class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="c_diff_email_address"
-														name="c_diff_email_address">
-												</div>
-												<div class="col-md-6">
-													<label for="c_diff_phone" class="text-black">Phone <span
-															class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="c_diff_phone" name="c_diff_phone"
-														placeholder="Phone Number">
-												</div>
-											</div>
-						
-										</div>
-						
-									</div>
-								</div>
-						
-								<div class="form-group">
-									<label for="c_order_notes" class="text-black">Order Notes</label>
-									<textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" class="form-control"
-										placeholder="Write your notes here..."></textarea>
-								</div>
-						
-							</div>
+			<div class="hero">
+				
+				<div id="container">
+					<div class="slide anim-in">
+					  <div class="image">
+						  <video autoplay muted loop class="background-video">
+							<source src="fundermax.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						  </video>
 						</div>
-						<div class="col-lg-6">
-							<div class="hero-img-wrap plavo">
-								<div class="imgBx">
-									
-									<div>
-										<!--<img src="korpus2.avif" alt="">-->
-										<img class="slika" src="" alt="nema slika ">
-									</div>
-											
-								</div>
-							</div>
+					  <div class="overlay"></div>
+					  
+					  <div class="content">
+				  <style>
+					.title {
+						
+						display: inline;
+					}
+				  </style>
+						<h1 class="title "  data-title="Vodeći lider evropskog brenda na domaćem tržištu">Vodeći lider evropskog brenda na domaćem tržištu</h1>
+				  
+						<ul class="city-info">
+						  <li data-lang-key="years" class="info-item">Godine poslovanja | <span class="info-value">26 godina sa vama</span></li>
+						  <li data-lang-key="employers" class="info-item">Broj zaposlenih | <span class="info-value">80</span></li>
+						  <li data-lang-key="clients" class="info-item">Zadovoljnih klijenata | <span class="info-value">preko 10.000</span></li>
+						  <li data-lang-key="projects" class="info-item">Realizovani projekti | <span class="info-value">9+</span></li>
+						</ul>
+				  
+						<h2 class="intermediate-title ">Neki naslov/tekst za poslovne partnere</h2>
+				  
+						<div class="city-info2">
+				
+						  <ul>
+
+							<li class="info-item  "><img src="./FundermaxBelo.png" alt=""></li>
+							<li class="info-item "><img  src="./usce.png" alt=""></li>
+							<li class="info-item "><img  src="./lidl.png" alt=""></li>
+							<li class="info-item "><img  src="./ablok.png" alt=""></span></li>
+							<li class="info-item "><img src="./ablok.png" alt=""></span></li>
+							<li class="info-item "><img src="./tesla.png" alt=""></span></li>
+						  
+						</ul>
+				  </div>
 						</div>
+					  </div>
+					  
+					  
 					</div>
-				</div>
+				
 			</div>
 		<!-- End Hero Section -->
 
@@ -783,21 +608,54 @@
 
 			</div>
 		</footer>
-		<!-- End Footer Section -->	
+		<!-- End Footer Section <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->	
 
 
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+		<script src="./js/jezik.js"></script>
+		<script src="./js/kompanija.js"></script>
 
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+                                                                                                                                                                                                                                      
 		<script>
 			$(".product-colors span").click(function () {
 				$(".product-colors span").removeClass("active");
 				$(this).addClass("active");
 				$(".imgBx img").attr('src', $(this).attr("data-pic"));
 			});
+			(function(window, document, $, undefined) {
+    var $slides;
+
+    function activateSlide() {
+        var $activeSlide = $slides.not('.active, .last-viewed, .anim-out').first();
+        if ($activeSlide.length) {
+            $activeSlide.addClass('active');
+            $activeSlide.siblings('.slide').removeClass('active anim-in last-viewed').addClass('anim-out');
+        }
+    }
+
+    function deactivateSlide() {
+        var $activeSlide = $slides.filter('.active');
+        if ($activeSlide.length) {
+            $activeSlide.removeClass('active').addClass('last-viewed');
+            $activeSlide.siblings('.slide').removeClass('anim-out').addClass('anim-in');
+        }
+    }
+
+    $(function() {
+        $slides = $('.slide');
+        // Pokretanje prve animacije nakon što se stranica učita
+        setTimeout(activateSlide, 1000); // 1000 milisekundi = 1 sekunda
+
+        // Ako želite omogućiti korisniku da zatvori aktivni slide i vrati sve u početno stanje
+        $slides.find('.btn-close').on('click', deactivateSlide);
+    });
+})(this, document, jQuery);
 		</script>
 	</body>
 
